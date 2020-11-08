@@ -14,7 +14,7 @@ export default function HomePage({information}) {
   return (
     <div className="home-page">
       <Header />
-      {Cards}
+      <div className="grid">{Cards}</div>
     </div>
   );
 }

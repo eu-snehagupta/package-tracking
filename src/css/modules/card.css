@@ -1,12 +1,10 @@
 .card {
   user-select: none;
   cursor: default;
-}
-
-.card .thumbnail {
-  width: 100%;
-  height: auto;
-  margin-bottom: 8px;
+  width: 300px;
+  border: 2px solid gray;
+  padding: 50px;
+  margin: 20px;
 }
 
 @media only screen and (min-width: 900px) {
