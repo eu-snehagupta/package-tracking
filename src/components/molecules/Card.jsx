@@ -23,7 +23,7 @@ export default function Card({ data }) {
             {/* <Link to={`video/${parcel_id}`}></Link> */}
             <div className="card-item">
                 <h3 className="parcel-id">#Parcel ID: {parcel_id}</h3>
-                <p>UserName: {user_name}!</p>
+                <p>UserName: {user_name}</p>
                 <p>Registered phone number: {user_phone}</p>
                 <p>Order status: {status}</p>
                 <p>ETA: {eta}</p>

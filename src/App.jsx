@@ -3,6 +3,7 @@ import { React, useEffect, useState } from "react";
 
 //components
 import HomePage from "./components/template/HomePage";
+import PackagePage from "./components/template/PackagePage"
 
 //style
 import "./css/style.css"
@@ -33,7 +34,7 @@ export default function App() {
       {status === 0 ? <p>Loading..</p> : null}
       {status === 1 ? <HomePage information={information}/> : null}
       {status === 2 ? <p>Error, Cant fetch data!</p> : null}
-      
+      {/* <PackagePage information={information[0]}/> */}
     </div>
   );
 }
