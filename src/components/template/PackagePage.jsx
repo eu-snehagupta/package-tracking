@@ -1,5 +1,6 @@
 // React Core
 import React from "react";
+import { Link } from "react-router-dom";
 
 //Components
 import Header from "../organisms/Header";
@@ -37,9 +38,9 @@ export default function PackagePage ({match, information}) {
                     <p>Pickup Location: {location_name}</p>
                     <p>Pickup Coordinate: {location_coordinate_latitude},{location_coordinate_longitude}</p>
                     {/* <p>Notes: {notes}</p> */}
-                    <a className= "button" href= "#">
+                    <Link className= "button" to= "/">
                       Back to Home
-                    </a>
+                    </Link>
            </div>
         </div>
     )
