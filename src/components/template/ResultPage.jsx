@@ -4,6 +4,7 @@ import React from "react";
 //Components
 import Header from "../organisms/Header";
 import Card from "../molecules/Card";
+import Footer from "../organisms/Footer";
 
 export default function ResultPage({ match, information }) {
 //data
@@ -22,6 +23,8 @@ const Cards= results.map((item) => {
             <h3>The result will appear here: </h3>
             <div className= "grid">{Cards}</div>
         </section>
+
+        <Footer />
     </div>
     );
 }

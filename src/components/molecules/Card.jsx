@@ -20,8 +20,8 @@ export default function Card({ data }) {
     } = data;
   
     return (
+      <Link to={`package/${id}`}>
         <article className="card">
-            <Link to={`package/${id}`}>
               <div className="card-item">
                   <h3 className="parcel-id">#Parcel ID: {parcel_id}</h3>
                   <p>UserName: {user_name}</p>
@@ -35,7 +35,7 @@ export default function Card({ data }) {
                   <p>Pickup Coordinate: {location_coordinate_latitude},{location_coordinate_longitude}</p>
                   <p>Notes: {notes}</p>
               </div>
-            </Link>
         </article>
+        </Link>
     );
   }

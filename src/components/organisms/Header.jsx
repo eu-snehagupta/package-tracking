@@ -12,7 +12,7 @@ const [query, setQuery]= useState("");
 
     return (
         <header className={"header"} >
-            <Link to="/" >
+            <Link to="/homepage" >
                 <img src={logo} alt= "Logo of the yellow company" />
             </Link>
             <div className="search-bar">

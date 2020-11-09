@@ -3,6 +3,7 @@ import { React, useEffect, useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 
 //components
+import TrackPage from "./components/template/TrackPage";
 import HomePage from "./components/template/HomePage";
 import PackagePage from "./components/template/PackagePage"
 import ResultPage from "./components/template/ResultPage";
@@ -41,16 +42,21 @@ export default function App() {
           <Route 
           path= "/" 
           exact
+          render= {() => <TrackPage />}
+          />
+          <Route 
+          path= "/homepage" 
+          exact
           render= {() => <HomePage information={information} />}
           />
           <Route 
-            path= "/package/:id"
+            path= "/homepage/package/:id"
             render= {({ match }) => (
               <PackagePage match= {match} information= {information} />
               )}
           />
           <Route 
-            path= "/results/:query"
+            path= "/homepage/results/:query"
             render= {({ match }) => (
               <ResultPage match= {match} information= {information} />
               )}
