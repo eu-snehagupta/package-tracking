@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 //components
 import HomePage from "./components/template/HomePage";
 import PackagePage from "./components/template/PackagePage"
+import ResultPage from "./components/template/ResultPage";
 
 //style
 import "./css/style.css"
@@ -46,6 +47,12 @@ export default function App() {
             path= "/package/:id"
             render= {({ match }) => (
               <PackagePage match= {match} information= {information} />
+              )}
+          />
+          <Route 
+            path= "/results/:query"
+            render= {({ match }) => (
+              <ResultPage match= {match} information= {information} />
               )}
           />
         </Switch> 
