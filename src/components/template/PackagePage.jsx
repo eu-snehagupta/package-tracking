@@ -8,7 +8,8 @@ import Header from "../organisms/Header";
 export default function PackagePage ({match, information}) {
 
   const matchId = match.params.id;
-
+  console.log(match);
+    
     const {
         status,
         eta,
@@ -21,7 +22,7 @@ export default function PackagePage ({match, information}) {
         user_phone,
         user_name,
         last_updated,
-      } = information[matchId];
+      } = information[0];
 
     return(
         <div className= "package-page">
