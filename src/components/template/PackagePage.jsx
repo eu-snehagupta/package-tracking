@@ -4,7 +4,7 @@ import React from "react";
 //Components
 import Header from "../organisms/Header";
 
-export default function PackagePage({information}) {
+export default function PackagePage ({information}) {
     const {
         status,
         eta,

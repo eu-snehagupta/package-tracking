@@ -1,5 +1,6 @@
 //React Core
 import { React, useEffect, useState } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 
 //components
 import HomePage from "./components/template/HomePage";
@@ -30,13 +31,26 @@ export default function App() {
     }, []);
     
   return (
-    <div className="App">
+    <Router>
+      <div className="App">
       {status === 0 ? <p>Loading..</p> : null}
-      {status === 1 ?  <HomePage information={information}/> : null}
       {status === 2 ? <p>Error, Cant fetch data!</p> : null}
+      {/* {status === 1 ?  <HomePage information={information}/> : null} */}
+        <Switch>
+          <Route 
+          path= "/" 
+          exact
+          render= {() => <HomePage information={information}/>}
+          />
+          <Route 
+            path= "/package" 
+            exact
+            render= {() => <PackagePage information= {information[0]}/>}
+          />
+        </Switch>
+      </div>
+    </Router>
+    
       
-      <PackagePage information= {information[0]}/>
-      
-    </div>
   );
 }
