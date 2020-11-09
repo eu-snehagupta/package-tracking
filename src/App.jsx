@@ -35,19 +35,21 @@ export default function App() {
       <div className="App">
       {status === 0 ? <p>Loading..</p> : null}
       {status === 2 ? <p>Error, Cant fetch data!</p> : null}
-      {/* {status === 1 ?  <HomePage information={information}/> : null} */}
+      {status === 1 ? 
         <Switch>
           <Route 
           path= "/" 
           exact
-          render= {() => <HomePage information={information}/>}
+          render= {() => <HomePage information={information} />}
           />
           <Route 
-            path= "/package" 
-            exact
-            render= {() => <PackagePage information= {information[0]}/>}
+            path= "/package/:id"
+            render= {({ match }) => (
+              <PackagePage match= {match} information= {information} />
+              )}
           />
-        </Switch>
+        </Switch> 
+        : null}
       </div>
     </Router>
     

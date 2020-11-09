@@ -1,10 +1,15 @@
 // React Core
 import React from "react";
+import { Link } from "react-router-dom";
 
 //Components
 import Header from "../organisms/Header";
 
-export default function PackagePage ({information}) {
+export default function PackagePage ({match, information}) {
+
+  const matchId = match.params.id;
+  console.log(match);
+    
     const {
         status,
         eta,
@@ -16,9 +21,8 @@ export default function PackagePage ({information}) {
         location_coordinate_longitude,
         user_phone,
         user_name,
-      //   notes,
         last_updated,
-      } = information;
+      } = information[0];
 
     return(
         <div className= "package-page">
@@ -35,9 +39,9 @@ export default function PackagePage ({information}) {
                     <p>Pickup Location: {location_name}</p>
                     <p>Pickup Coordinate: {location_coordinate_latitude},{location_coordinate_longitude}</p>
                     {/* <p>Notes: {notes}</p> */}
-                    <a className= "button" href= "#">
+                    <Link className= "button" to= "/">
                       Back to Home
-                    </a>
+                    </Link>
            </div>
         </div>
     )
