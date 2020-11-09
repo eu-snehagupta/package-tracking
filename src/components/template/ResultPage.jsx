@@ -8,13 +8,7 @@ import Card from "../molecules/Card";
 export default function ResultPage({ match, information }) {
 //data
 const query= new RegExp(match.params.query, "i");
-const results= information.filter((item) => item.user_name.match(query));
-
-console.log(information);
-console.log(query);
-console.log(results);
-console.log(match);
-
+const results= information.filter((item) => item.parcel_id.match(query));
 
 const Cards= results.map((item) => {
     return <Card key={item.id} data={item} />;

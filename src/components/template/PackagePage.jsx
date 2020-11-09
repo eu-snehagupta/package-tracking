@@ -4,46 +4,32 @@ import { Link } from "react-router-dom";
 
 //Components
 import Header from "../organisms/Header";
+import Card from "../molecules/Card";
 
 export default function PackagePage ({match, information}) {
 
-  const matchId = match.params.id;
-  console.log(match);
-    
-    const {
-        status,
-        eta,
-        parcel_id,
-        sender,
-        verification_required,
-        location_name,
-        location_coordinate_latitude,
-        location_coordinate_longitude,
-        user_phone,
-        user_name,
-        last_updated,
-      } = information[0];
+//data
+const matchId= new RegExp(match.params.id, "i");
+const results= information.filter((item) => item.id.match(matchId));
 
-    return(
-        <div className= "package-page">
-           <Header />
-           <div className="text-container">
-                <h3 className="parcel-id">#Parcel ID: {parcel_id}</h3>
-                    <p>UserName: {user_name}</p>
-                    <p>Registered phone number: {user_phone}</p>
-                    <p>Order status: {status}</p>
-                    <p>ETA: {eta}</p>
-                    <p>Last Updated: {last_updated}</p>
-                    <p>Verification Required: {verification_required}</p>
-                    <p>Sender: {sender}</p>
-                    <p>Pickup Location: {location_name}</p>
-                    <p>Pickup Coordinate: {location_coordinate_latitude},{location_coordinate_longitude}</p>
-                    {/* <p>Notes: {notes}</p> */}
-                    <Link className= "button" to= "/">
-                      Back to Home
-                    </Link>
-           </div>
-        </div>
-    )
-    
+console.log(matchId);
+console.log(results);
+console.log(information);
+
+const Cards= results.map((item) => {
+    return <Card key={item.id} data={item} />;
+});
+  return(
+    <div className= "package-page">
+      <Header />
+      <div className="text-container">
+          <section className= "container">
+                <div className= "grid">{Cards}</div>
+          </section>
+          <Link className= "button" to= "/">
+            Back to Home
+          </Link>
+      </div>
+    </div>
+  );
 }
