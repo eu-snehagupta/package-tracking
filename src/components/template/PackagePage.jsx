@@ -4,7 +4,10 @@ import React from "react";
 //Components
 import Header from "../organisms/Header";
 
-export default function PackagePage ({information}) {
+export default function PackagePage ({match, information}) {
+
+  const matchId = match.params.id;
+
     const {
         status,
         eta,
@@ -16,9 +19,8 @@ export default function PackagePage ({information}) {
         location_coordinate_longitude,
         user_phone,
         user_name,
-      //   notes,
         last_updated,
-      } = information;
+      } = information[matchId];
 
     return(
         <div className= "package-page">
