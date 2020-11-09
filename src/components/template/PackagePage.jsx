@@ -35,6 +35,9 @@ export default function PackagePage({information}) {
                     <p>Pickup Location: {location_name}</p>
                     <p>Pickup Coordinate: {location_coordinate_latitude},{location_coordinate_longitude}</p>
                     {/* <p>Notes: {notes}</p> */}
+                    <a className= "button" href= "#">
+                      Back to Home
+                    </a>
            </div>
         </div>
     )

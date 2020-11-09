@@ -32,9 +32,11 @@ export default function App() {
   return (
     <div className="App">
       {status === 0 ? <p>Loading..</p> : null}
-      {status === 1 ? <HomePage information={information}/> : null}
+      {status === 1 ?  <HomePage information={information}/> : null}
       {status === 2 ? <p>Error, Cant fetch data!</p> : null}
-      {/* <PackagePage information={information[0]}/> */}
+      
+      <PackagePage information= {information[0]}/>
+      
     </div>
   );
 }
