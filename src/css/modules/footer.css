@@ -1,0 +1,12 @@
+.footer {
+    background-color: #c32b23;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .footer a {
+      padding: 38px;
+      color: white;
+      font-weight: bold;
+      
+  }

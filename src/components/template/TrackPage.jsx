@@ -8,12 +8,12 @@ import Footer from "../organisms/Footer";
 
 export default function TrackPage() {
     return (
-        <div className= {"enter-page"}>
-            <Header/>
+        <div className= "track-page">
+            <Header className= "header"/>
             <Link className= "button" to= "/homepage">
                 Track
             </Link>
-            <Footer />
+            <Footer className= "footer"/>
         </div>
     )
 }

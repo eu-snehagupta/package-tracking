@@ -3,8 +3,8 @@
 
 }
 
-/* YouTube breakpoints */
-@media only screen and (min-width: 500px) {
+/* Desktop */
+@media only screen and (min-width: 750px) {
   .home-page .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -12,20 +12,3 @@
   }
 }
 
-@media only screen and (min-width: 900px) {
-  .home-page .grid {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-@media only screen and (min-width: 1000px) {
-  .home-page .grid {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-}
-
-@media only screen and (min-width: 1366px) {
-  .home-page .grid {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  }
-}

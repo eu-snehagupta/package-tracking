@@ -9,7 +9,7 @@ export default function Footer() {
         <footer className={"footer"} >
             <a href="mailto: softwaredevelopmentacademy@gmail.com" 
             target="_blank">
-            @Email us 
+            @Email us
             </a>
             <a href="http://wap.dhl.com/legal_f.html" 
             target="_blank">
