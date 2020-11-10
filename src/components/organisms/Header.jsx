@@ -15,14 +15,14 @@ const [query, setQuery]= useState("");
             <Link to="/homepage" >
                 <img src={logo} alt= "Logo of the yellow company" />
             </Link>
-            <div className="search-bar">
+            {/* <div className="search-bar">
                 <input 
                 placeholder= "Search" 
                 value={query} 
                 onChange={(event) => setQuery(event.target.value)}
                 />
                 <Link to= "{`/results/${query}`}">Search</Link>
-            </div>
+            </div> */}
         </header>
     );
 }

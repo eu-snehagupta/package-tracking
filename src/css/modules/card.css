@@ -1,9 +1,31 @@
 .card {
   user-select: none;
   cursor: default;
-  width: 300px;
+  width: 360px;
   border: 2px solid gray;
-  padding: 50px;
-  margin: 20px;
+  padding: 0px;
+  margin: 5px;
+  background: url("../../assets/images/card-image.jpg") center;
+  background-size: cover;
 }
 
+.card .card-item {
+  color: white;
+  font-weight: bold;
+  padding: 20px;
+  text-align: center;
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4);
+}
+
+
+/* Desktop */
+@media only screen and (min-width: 750px) {
+  .card {
+    padding: 0px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
