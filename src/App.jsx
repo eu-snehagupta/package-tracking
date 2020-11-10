@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import TrackPage from "./components/template/TrackPage";
 import HomePage from "./components/template/HomePage";
 import PackagePage from "./components/template/PackagePage"
-import ResultPage from "./components/template/ResultPage";
+// import ResultPage from "./components/template/ResultPage";
 
 //style
 import "./css/style.css"
@@ -55,12 +55,12 @@ export default function App() {
               <PackagePage match= {match} information= {information} />
               )}
           />
-          <Route 
+          {/* <Route 
             path= "/homepage/results/:query"
             render= {({ match }) => (
               <ResultPage match= {match} information= {information} />
               )}
-          />
+          /> */}
         </Switch> 
         : null}
       </div>

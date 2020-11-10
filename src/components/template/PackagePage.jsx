@@ -11,7 +11,7 @@ export default function PackagePage ({match, information}) {
 
 //data
 const matchId= new RegExp(match.params.id, "i");
-const results= information.filter((item) => item.id.match(matchId));
+const results= information.filter((item) => item.user_name.match(matchId));
 
 console.log(matchId);
 console.log(results);
